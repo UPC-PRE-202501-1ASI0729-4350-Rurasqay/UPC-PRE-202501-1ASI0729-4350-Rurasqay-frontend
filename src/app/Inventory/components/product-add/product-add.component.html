@@ -1,0 +1,125 @@
+<!-- product-add.component.html -->
+<div class="title">
+  <img src="images/EasyStockLogo.png" alt="EasyStock Logo" class="logo">
+  <h1>EasyStock</h1>
+</div>
+
+<div class="form-container">
+  <h1>Add New Products</h1>
+
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <!-- Sección Básica -->
+    <div class="form-section">
+      <p class="required-field">Product Name</p>
+      <mat-form-field appearance="outline">
+        <input matInput formControlName="name" required>
+      </mat-form-field>
+
+      <p class="required-field">Category</p>
+      <mat-form-field appearance="outline" style="border: #950015">
+        <mat-select formControlName="category" required>
+          <mat-option *ngFor="let cat of categories" [value]="cat">{{cat}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <p class="required-field">SKU Code (MAYUS)</p>
+      <mat-form-field appearance="outline">
+        <input matInput formControlName="sku" required>
+      </mat-form-field>
+
+      <p class="required-field">Stock</p>
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <input matInput type="number" formControlName="initialStock" required>
+        </mat-form-field>
+      </div>
+
+      <p>Description</p>
+      <mat-form-field appearance="outline">
+        <textarea matInput formControlName="description" rows="3"></textarea>
+      </mat-form-field>
+
+      <p>Expiration Date</p>
+      <mat-form-field appearance="outline">
+        <input matInput [matDatepicker]="picker" formControlName="expirationDate" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <div class="image-upload">
+        <input type="file" accept="image/*" (change)="onFileSelected($event)" #fileInput hidden>
+        <button mat-raised-button type="button" (click)="fileInput.click()">
+          <mat-icon>add_photo_alternate</mat-icon> Select
+        </button>
+        <div class="image-preview" *ngIf="previewUrl">
+          <img [src]="previewUrl" alt="Vista previa de imagen">
+        </div>
+      </div>
+    </div>
+
+    <!-- Campos Premium -->
+    <div class="premium-section" *ngIf="showPremiumFields">
+      <h2>Only For Premium Members</h2>
+      <p>Temperature Range</p>
+
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <div class="range-inputs">
+            <input matInput type="number" formControlName="tempRangeStart">
+            <span>to</span>
+            <input matInput type="number" formControlName="tempRangeEnd">
+            <mat-select formControlName="tempUnit" class="unit-select">
+              <mat-option *ngFor="let unit of units" [value]="unit">{{unit}}</mat-option>
+            </mat-select>
+          </div>
+        </mat-form-field>
+
+        <p>Set Ideal Humidity</p>
+        <mat-form-field appearance="outline">
+          <div class="range-inputs">
+            <input matInput type="number" formControlName="idealHumidity">
+            <mat-select formControlName="humidityUnit" class="unit-select">
+              <mat-option *ngFor="let unit of units" [value]="unit">{{unit}}</mat-option>
+            </mat-select>
+          </div>
+        </mat-form-field>
+
+        <p>Set Weight</p>
+        <mat-form-field appearance="outline">
+          <div class="range-inputs">
+            <input matInput type="number" formControlName="unitWeight">
+            <mat-select formControlName="weightUnit" class="unit-select">
+              <mat-option *ngFor="let unit of units" [value]="unit">{{unit}}</mat-option>
+            </mat-select>
+          </div>
+        </mat-form-field>
+      </div>
+
+      <p>Link Sensors</p>
+      <mat-form-field appearance="outline">
+        <mat-select formControlName="linkedSensors" multiple>
+          <mat-option *ngFor="let sensor of sensors" [value]="sensor">{{sensor}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="premium-info">
+        <button mat-button color="primary" type="button">
+          <mat-icon>info</mat-icon> What includes the premium plan?
+        </button>
+      </div>
+    </div>
+
+    <!-- Botones de acción -->
+    <div class="form-actions">
+      <button mat-raised-button
+              color="{{isBasicFormValid() ? 'accent' : 'primary'}}"
+              type="submit"
+              [disabled]="!isBasicFormValid()">
+        <mat-icon>save</mat-icon> Save
+      </button>
+      <button mat-button type="button" (click)="togglePremium()">
+        {{showPremiumFields ? 'Hide' : 'Show'}} Premium Fields
+      </button>
+    </div>
+  </form>
+</div>

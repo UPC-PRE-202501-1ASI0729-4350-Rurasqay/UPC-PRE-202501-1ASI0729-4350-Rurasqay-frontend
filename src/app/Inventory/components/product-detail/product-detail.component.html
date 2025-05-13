@@ -1,0 +1,44 @@
+<div class="title">
+  <img src="images/EasyStockLogo.png" alt="EasyStock Logo" class="logo">
+  <h1>EasyStock</h1>
+</div>
+
+<div class="subtitle">
+  <h1>Product Details</h1>
+</div>
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef style="text"><strong>Name</strong></mat-header-cell>
+    <mat-cell *matCellDef="let p">{{ p.name }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="category">
+    <mat-header-cell *matHeaderCellDef><strong>Category</strong></mat-header-cell>
+    <mat-cell *matCellDef="let p">{{ p.category }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="quantity">
+    <mat-header-cell *matHeaderCellDef><strong>Stock</strong></mat-header-cell>
+    <mat-cell *matCellDef="let p">{{ p.quantity }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="sku">
+    <mat-header-cell *matHeaderCellDef><strong>SKU</strong></mat-header-cell>
+    <mat-cell *matCellDef="let p">{{ p.sku }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="expirationDate">
+    <mat-header-cell *matHeaderCellDef><strong>Expiration Date</strong></mat-header-cell>
+    <mat-cell *matCellDef="let p">{{ p.expirationDate | date }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="description">
+    <mat-header-cell *matHeaderCellDef><strong>Description</strong></mat-header-cell>
+    <mat-cell *matCellDef="let p">{{ p.description }}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+
