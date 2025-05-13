@@ -2,7 +2,6 @@
   <mat-sidenav opened mode="side" class="sidenav">
     <div class="background">
       <img src="images/fondo-user.jpg" alt="Background"/>
-      <h1>Profile</h1>
     </div>
 
     <mat-nav-list>
@@ -11,10 +10,22 @@
         <span>Dashboard</span>
       </a>
 
-      <a mat-list-item routerLink="/products" routerLinkActive="active">
+      <mat-list-item class="submenu" [matMenuTriggerFor]="productsMenu">
         <mat-icon>inventory_2</mat-icon>
         <span>Products</span>
-      </a>
+        <mat-icon class="menu-caret">{{isProductsExpanded ? 'expand_less' : 'expand_more'}}</mat-icon>
+      </mat-list-item>
+      <mat-menu #productsMenu="matMenu" class="submenu-items">
+        <button mat-menu-item routerLink="/products/edit" routerLinkActive="active">
+          <span>Edit Product</span>
+        </button>
+        <button mat-menu-item routerLink="/products/add" routerLinkActive="active">
+          <span>Add Product</span>
+        </button>
+        <button mat-menu-item routerLink="/products/detail" routerLinkActive="active">
+          <span>Product Details</span>
+        </button>
+      </mat-menu>
 
       <a mat-list-item routerLink="/activity" routerLinkActive="active">
         <mat-icon>swap_vert</mat-icon>

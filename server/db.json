@@ -1,0 +1,184 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Natural Yogurt",
+      "category": "Dairy",
+      "quantity": 120,
+      "sku": "YOG-001",
+      "expirationDate": "2025-06-20T00:00:00Z",
+      "description": "Sugar-free natural yogurt"
+    },
+    {
+      "id": "2",
+      "name": "Whole Wheat Bread",
+      "category": "Bakery",
+      "quantity": 60,
+      "sku": "BRD-002",
+      "expirationDate": "2025-05-15T00:00:00Z",
+      "description": "High-fiber whole wheat bread"
+    },
+    {
+      "id": "3",
+      "name": "Orange Juice",
+      "category": "Beverages",
+      "quantity": 200,
+      "sku": "JUICE-003",
+      "expirationDate": "2025-06-10T00:00:00Z",
+      "description": "Natural juice without preservatives"
+    },
+    {
+      "id": "4",
+      "name": "Cheddar Cheese",
+      "category": "Dairy",
+      "quantity": 80,
+      "sku": "CHS-004",
+      "expirationDate": "2025-07-01T00:00:00Z",
+      "description": "Aged cheddar cheese"
+    },
+    {
+      "id": "5",
+      "name": "Almond Milk",
+      "category": "Beverages",
+      "quantity": 150,
+      "sku": "MLK-005",
+      "expirationDate": "2025-08-20T00:00:00Z",
+      "description": "Unsweetened almond milk"
+    },
+    {
+      "id": "6",
+      "name": "Strawberry Jam",
+      "category": "Condiments",
+      "quantity": 75,
+      "sku": "JAM-006",
+      "expirationDate": "2026-01-15T00:00:00Z",
+      "description": "Organic strawberry jam"
+    },
+    {
+      "id": "7",
+      "name": "Brown Rice",
+      "category": "Grains",
+      "quantity": 300,
+      "sku": "RCE-007",
+      "expirationDate": "2026-12-31T00:00:00Z",
+      "description": "Whole grain brown rice"
+    },
+    {
+      "id": "8",
+      "name": "Olive Oil",
+      "category": "Pantry",
+      "quantity": 50,
+      "sku": "OIL-008",
+      "expirationDate": "2026-05-10T00:00:00Z",
+      "description": "Extra virgin olive oil"
+    },
+    {
+      "id": "9",
+      "name": "Frozen Peas",
+      "category": "Frozen Foods",
+      "quantity": 90,
+      "sku": "FRZ-009",
+      "expirationDate": "2026-03-01T00:00:00Z",
+      "description": "Fresh frozen green peas"
+    },
+    {
+      "id": "10",
+      "name": "Tomato Sauce",
+      "category": "Canned Goods",
+      "quantity": 120,
+      "sku": "CND-010",
+      "expirationDate": "2026-04-25T00:00:00Z",
+      "description": "Classic tomato sauce"
+    },
+    {
+      "id": "11",
+      "name": "Bananas",
+      "category": "Produce",
+      "quantity": 180,
+      "sku": "FRU-011",
+      "expirationDate": "2025-05-14T00:00:00Z",
+      "description": "Fresh ripe bananas"
+    },
+    {
+      "id": "12",
+      "name": "Canned Tuna",
+      "category": "Canned Goods",
+      "quantity": 110,
+      "sku": "TUNA-012",
+      "expirationDate": "2026-08-30T00:00:00Z",
+      "description": "Canned tuna in olive oil"
+    },
+    {
+      "id": "13",
+      "name": "Peanut Butter",
+      "category": "Pantry",
+      "quantity": 70,
+      "sku": "PNT-013",
+      "expirationDate": "2026-07-20T00:00:00Z",
+      "description": "Smooth peanut butter"
+    },
+    {
+      "id": "14",
+      "name": "Green Tea",
+      "category": "Beverages",
+      "quantity": 130,
+      "sku": "TEA-014",
+      "expirationDate": "2027-02-10T00:00:00Z",
+      "description": "Organic green tea bags"
+    },
+    {
+      "id": "15",
+      "name": "Carrots",
+      "category": "Produce",
+      "quantity": 95,
+      "sku": "VEG-015",
+      "expirationDate": "2025-05-25T00:00:00Z",
+      "description": "Fresh organic carrots"
+    },
+    {
+      "id": "16",
+      "name": "Greek Yogurt",
+      "category": "Dairy",
+      "quantity": 100,
+      "sku": "YOG-016",
+      "expirationDate": "2025-06-18T00:00:00Z",
+      "description": "Plain Greek yogurt"
+    },
+    {
+      "id": "17",
+      "name": "Salted Crackers",
+      "category": "Snacks",
+      "quantity": 85,
+      "sku": "SNK-017",
+      "expirationDate": "2026-09-05T00:00:00Z",
+      "description": "Crispy salted crackers"
+    },
+    {
+      "id": "18",
+      "name": "Apples",
+      "category": "Produce",
+      "quantity": 160,
+      "sku": "FRU-018",
+      "expirationDate": "2025-05-20T00:00:00Z",
+      "description": "Red delicious apples"
+    },
+    {
+      "id": "19",
+      "name": "Oatmeal",
+      "category": "Grains",
+      "quantity": 140,
+      "sku": "GRA-019",
+      "expirationDate": "2027-01-01T00:00:00Z",
+      "description": "Rolled oats for breakfast"
+    },
+    {
+      "id": "20",
+      "name": "Butter",
+      "category": "Dairy",
+      "quantity": 75,
+      "sku": "DIA-020",
+      "expirationDate": "2025-07-25T00:00:00Z",
+      "description": "Salted cream butter"
+    }
+  ]
+}
