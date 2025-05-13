@@ -1,11 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-sensors',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './sensors.component.html',
-  styleUrl: './sensors.component.css'
+  styleUrls: ['./sensors.component.css']
 })
-export class SensorsComponent {
+export class SensorsComponent implements OnInit {
+  // Datos de ejemplo
+  products = [
+    { id: 1, name: 'Yogurt Natural', status: '🔴' },
+    { id: 2, name: 'Crema facial', status: '🟡' },
+    { id: 3, name: 'Vacuna Covid', status: '🟢' }
+  ];
 
+  // Función trackBy requerida
+  trackById(index: number, item: any): number {
+    return item.id;
+  }
+
+  ngOnInit() {
+    console.log('Componente iniciado', this.products);
+  }
 }
