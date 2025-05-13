@@ -1,0 +1,92 @@
+<div class="sensor-container">
+  <!-- Encabezado con imagen y título -->
+  <div class="header-section">
+    <div class="header-image-container">
+      <img
+        src="images/logo-sensores.png"
+        alt="Icono Sensores"
+        class="header-image"
+      />
+    </div>
+    <div class="header-content">
+      <h2 class="main-title">Asignar Sensores a Productos/Ubicaciones</h2>
+    </div>
+  </div>
+
+  <div class="steps-container">
+    <div class="first-step-container">
+      <h2>Paso 1 : Seleccionar Producto</h2>
+
+      <div class="inputs-container">
+        <span class="input-label">Producto:</span>
+        <input type="text" class="input-box" placeholder="" />
+        -
+        <span class="input-label">Lote:</span>
+        <input type="text" class="input-box" placeholder="" />
+      </div>
+
+      <span>Producto seleccionado: “Vacuna covid - Lote #A23”</span>
+    </div>
+
+    <div class="second-step-container">
+      <h2>Paso 2: Selecciona ubicación de almacenamiento</h2>
+
+      <span>Ubicación: “Cámara 3 - Farmacia Central”</span>
+    </div>
+
+    <div class="thrid-step-container">
+      <h2>Paso 3: Paso 3: Asignar sensores disponibles</h2>
+      <div class="input-box-container">
+        <label for="">Sensor #TEMP-004 (Temperatura)</label>
+        <input type="checkbox" class="input-box" />
+      </div>
+
+      <div class="input-box-container">
+        <label for="">Sensor #HUM-011 (Humedad) </label>
+        <input type="checkbox" class="input-box" />
+      </div>
+
+      <div class="input-box-container">
+        <label for="">Sensor #WEIGHT-100 (Peso) </label>
+        <input type="checkbox" class="input-box" />
+      </div>
+    </div>
+  </div>
+
+  <h1>Ver Sensores Activados</h1>
+
+  <div class="table-container">
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nombre Producto</th>
+          <th>Ubicación</th>
+          <th>Sensores</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Vacuna Covid</td>
+          <td>Cámara 3</td>
+          <td>TEMP-004, HUM-011</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Yogurt Natural</td>
+          <td></td>
+          <td>TEMP-001</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Leche Gloria</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <button class="back-button" [routerLink]="['/sensors']">Volver</button>
+</div>
