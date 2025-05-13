@@ -1,1 +1,88 @@
-<p>sensors works!</p>
+<div class="sensor-container">
+  <!-- Encabezado con imagen y título -->
+  <div class="header-section">
+    <div class="header-image-container">
+      <img src='images/logo-sensores.png' alt="Icono Sensores" class="header-image">
+    </div>
+    <div class="header-content">
+      <h2 class="main-title">Vista de Sensores en Tiempo Real</h2>
+      <div class="title-underline"></div>
+    </div>
+  </div>
+
+<!-- Campos de producto y lote -->
+<div class="input-fields">
+  <div class="input-group">
+    <span class="input-label">Producto:</span>
+    <input type="text" class="input-box" placeholder="">
+  </div>
+
+  <div class="input-group">
+    <span class="input-label">Lote:</span>
+    <input type="text" class="input-box" placeholder=" ">
+  </div>
+</div>
+
+<div class="sensor-readings">
+  <!-- Temperatura -->
+  <div class="reading">
+    <span class="reading-value">Temperatura: <span class="highlight">12.5°</span></span>
+    <span class="reading-ideal">(Ideal: 2°C – 8°C)</span>
+  </div>
+
+  <!-- Humedad -->
+  <div class="reading">
+    <span class="reading-value">Humedad: <span class="highlight">55%</span></span>
+    <span class="reading-ideal">(Ideal: 30% – 50%)</span>
+  </div>
+
+  <!-- Peso -->
+  <div class="reading">
+    <span class="reading-value">Peso: <span class="highlight">500g</span></span>
+    <span class="reading-ideal">(Esperado: 500g)</span>
+  </div>
+</div>
+
+<!-- Alerta -->
+<div class="alert-message">
+  <span class="alert-label">Alerta:</span>
+  <span class="alert-text">"La temperatura actual excede los límites seguros"</span>
+</div>
+
+<div class="action-buttons">
+  <div class="button-item"> Ver histórico</div>
+  <div class="button-item"> Ver sensor físico</div>
+  <div class="button-item"> Configurar alertas</div>
+</div>
+
+  <div class="divider"></div>
+  <p>   </p>
+  <p>   </p>
+  <p>   </p>
+  <p>   </p>
+
+  <h3 class="product-list-title">Lista de productos con sensores</h3>
+  <div class="table-container"> <!-- Nuevo contenedor -->
+    <table class="product-table">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Nombre Producto</th>
+        <th>Estado</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td class="status">{{ product.status }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+<div class="secondary-actions">
+  <button class="secondary-button">Asignar Sensor</button>
+  <button class="secondary-button">Historial de Datos Ambientales</button>
+</div>
+

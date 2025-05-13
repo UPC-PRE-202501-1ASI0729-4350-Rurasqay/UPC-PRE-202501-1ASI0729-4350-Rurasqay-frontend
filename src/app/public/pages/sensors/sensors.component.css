@@ -1,0 +1,265 @@
+/* Contenedor principal ajustado */
+.table-container {
+  border: 1px solid #FFA360;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  margin: 10px 0;
+  display: inline-block;
+  width: auto; /* Ajuste automático al contenido */
+}
+
+/* Estilos de tabla optimizados */
+.product-table {
+  width: auto;
+  border-collapse: collapse;
+  table-layout: fixed; /* Forzar el respeto de los anchos */
+}
+
+/* Cabeceras optimizadas */
+.product-table th {
+  padding: 8px 12px;
+  text-align: left;
+  color: black;
+  font-weight: bold;
+  border-bottom: 2px solid #FFA360;
+  background-color: #FFF9F6; /* Fondo claro naranja */
+}
+
+/* Celdas optimizadas */
+.product-table td {
+  padding: 8px 12px;
+  color: black;
+  font-weight: normal;
+  border-bottom: 1px solid #FFA360;
+}
+
+/* Ajustes precisos de columnas */
+.product-table th:nth-child(1),
+.product-table td:nth-child(1) {
+  width: 40px; /* Ancho fijo para columna # */
+  text-align: center;
+  padding: 8px 4px;
+}
+
+.product-table th:nth-child(2),
+.product-table td:nth-child(2) {
+  width: 200px; /* Ancho fijo para Nombre Producto */
+  padding: 8px 12px;
+  border-right: 1px solid #FFA360;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-table th:nth-child(3),
+.product-table td:nth-child(3) {
+  width: 80px; /* Ancho fijo para Estado */
+  text-align: center;
+  padding: 8px 4px;
+}
+
+/* Eliminar bordes innecesarios */
+.product-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Estilos para el título principal */
+.main-title {
+  color: #950015;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Contenedor de campos de entrada */
+.input-fields {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+/* Grupo de entrada (label + input) */
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+/* Etiqueta del campo */
+.input-label {
+  color: #950015;
+  font-weight: 600;
+  margin-right: 10px;
+  min-width: 60px;
+}
+
+/* Cuadro de entrada */
+.input-box {
+  border: 1px solid #950015;
+  border-radius: 4px;
+  padding: 8px 12px;
+  min-width: 100px;
+  color: #333;
+}
+
+.input-box:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(149, 0, 21, 0.2);
+}
+/* Estilos para las lecturas de sensores - Versión final */
+.reading {
+  display: flex;
+  margin-bottom: 8px;
+  align-items: baseline;
+}
+
+.reading-value {
+  font-weight: 500;
+}
+
+/* Cambio importante: Ahora la etiqueta completa tiene color */
+.reading-value {
+  color: #950015; /* Color para Temperatura:, Humedad:, Peso: */
+}
+
+.highlight {
+  color: #950015;
+  font-weight: 600;
+}
+
+.reading-ideal {
+  color: #9A9A9A;
+  margin-left: 8px;
+  font-size: 0.95em;
+}
+
+/* Estilos para la alerta (se mantienen igual) */
+.alert-message {
+  background-color: #FFF5F5;
+  border-left: 3px solid #950015;
+  padding: 10px 15px;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.alert-label {
+  color: #950015;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.alert-text {
+  color: black;
+}
+
+/* Estilos para los botones con puntos */
+.action-buttons {
+  display: flex;
+  gap: 30px; /* Espacio entre elementos */
+  margin: 20px 0;
+}
+
+.button-item {
+  color: #C00000; /* Color rojo solicitado */
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.button-item::before {
+  content: "•";
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.button-item:hover {
+  color: #A00000; /* Color más oscuro al pasar el mouse */
+  transform: translateY(-1px);
+}
+
+/* Si prefieres mantener el estilo de botón pero con puntos: */
+/*
+.button-item {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: #C00000;
+  cursor: pointer;
+}
+*/
+
+/* Contenedor de botones secundarios */
+.secondary-actions {
+  display: flex;
+  gap: 40px; /* Espacio aumentado entre botones */
+  margin-top: 30px;
+}
+
+/* Estilo para botones secundarios */
+.secondary-button {
+  background-color: white; /* Fondo blanco */
+  color: #950015; /* Color de texto solicitado */
+  border: 1px solid #950015; /* Borde del color del texto */
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-width: 180px; /* Ancho mínimo para consistencia */
+  text-align: center;
+}
+
+.secondary-button:hover {
+  background-color: #FFF0F0; /* Fondo muy claro al pasar el mouse */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Para pantallas pequeñas (responsive) */
+@media (max-width: 600px) {
+  .secondary-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+/* Encabezado */
+.header-section {
+  display: flex;
+  align-items: flex-start; /* Alinea en la parte superior */
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.header-image-container {
+  margin-top: 5px; /* Ajuste fino de alineación */
+}
+
+.header-image {
+  width: 60px; /* Tamaño ajustable */
+  height: auto;
+  display: block; /* Elimina espacio extra debajo */
+}
+
+.header-content {
+  flex: 1;
+}
+
+.main-title {
+  color: #950015;
+  font-size: 1.8rem;
+  margin: 0 0 8px 0; /* Margen solo abajo */
+  font-weight: 600;
+}
+
+
+/* Solución para imagen que no aparece */
+:host {
+  display: block;
+}
+/* Estilo para el título de la lista de productos */
+.product-list-title {
+  color: #950015;
+}
