@@ -1,59 +1,59 @@
 <div class="sensor-container">
-  <!-- Encabezado con imagen y título -->
+  <!-- Header with image and title -->
   <div class="header-section">
     <div class="header-image-container">
-      <img src='images/logo-sensores.png' alt="Icono Sensores" class="header-image">
+      <img src='images/logo-sensores.png' alt="Sensor Icon" class="header-image">
     </div>
     <div class="header-content">
-      <h2 class="main-title">Vista de Sensores en Tiempo Real</h2>
+      <h2 class="main-title">Real-Time Sensor View</h2>
       <div class="title-underline"></div>
     </div>
   </div>
 
-<!-- Campos de producto y lote -->
-<div class="input-fields">
-  <div class="input-group">
-    <span class="input-label">Producto:</span>
-    <input type="text" class="input-box" placeholder="">
+  <!-- Product and batch fields -->
+  <div class="input-fields">
+    <div class="input-group">
+      <span class="input-label">Product:</span>
+      <input type="text" class="input-box" placeholder="">
+    </div>
+
+    <div class="input-group">
+      <span class="input-label">Batch:</span>
+      <input type="text" class="input-box" placeholder=" ">
+    </div>
   </div>
 
-  <div class="input-group">
-    <span class="input-label">Lote:</span>
-    <input type="text" class="input-box" placeholder=" ">
+  <div class="sensor-readings">
+    <!-- Temperature -->
+    <div class="reading">
+      <span class="reading-value">Temperature: <span class="highlight">12.5°</span></span>
+      <span class="reading-ideal">(Ideal: 2°C – 8°C)</span>
+    </div>
+
+    <!-- Humidity -->
+    <div class="reading">
+      <span class="reading-value">Humidity: <span class="highlight">55%</span></span>
+      <span class="reading-ideal">(Ideal: 30% – 50%)</span>
+    </div>
+
+    <!-- Weight -->
+    <div class="reading">
+      <span class="reading-value">Weight: <span class="highlight">500g</span></span>
+      <span class="reading-ideal">(Expected: 500g)</span>
+    </div>
   </div>
-</div>
 
-<div class="sensor-readings">
-  <!-- Temperatura -->
-  <div class="reading">
-    <span class="reading-value">Temperatura: <span class="highlight">12.5°</span></span>
-    <span class="reading-ideal">(Ideal: 2°C – 8°C)</span>
+  <!-- Alert -->
+  <div class="alert-message">
+    <span class="alert-label">Alert:</span>
+    <span class="alert-text">"Current temperature exceeds safe limits"</span>
   </div>
 
-  <!-- Humedad -->
-  <div class="reading">
-    <span class="reading-value">Humedad: <span class="highlight">55%</span></span>
-    <span class="reading-ideal">(Ideal: 30% – 50%)</span>
+  <div class="action-buttons">
+    <div class="button-item">View History</div>
+    <div class="button-item">View Physical Sensor</div>
+    <div class="button-item">Configure Alerts</div>
   </div>
-
-  <!-- Peso -->
-  <div class="reading">
-    <span class="reading-value">Peso: <span class="highlight">500g</span></span>
-    <span class="reading-ideal">(Esperado: 500g)</span>
-  </div>
-</div>
-
-<!-- Alerta -->
-<div class="alert-message">
-  <span class="alert-label">Alerta:</span>
-  <span class="alert-text">"La temperatura actual excede los límites seguros"</span>
-</div>
-
-<div class="action-buttons">
-  <div class="button-item"> Ver histórico</div>
-  <div class="button-item"> Ver sensor físico</div>
-  <div class="button-item"> Configurar alertas</div>
-</div>
 
   <div class="divider"></div>
   <p>   </p>
@@ -61,14 +61,14 @@
   <p>   </p>
   <p>   </p>
 
-  <h3 class="product-list-title">Lista de productos con sensores</h3>
-  <div class="table-container"> <!-- Nuevo contenedor -->
+  <h3 class="product-list-title">Product List with Sensors</h3>
+  <div class="table-container"> <!-- New container -->
     <table class="product-table">
       <thead>
       <tr>
         <th>#</th>
-        <th>Nombre Producto</th>
-        <th>Estado</th>
+        <th>Product Name</th>
+        <th>Status</th>
       </tr>
       </thead>
       <tbody>
@@ -81,8 +81,8 @@
     </table>
   </div>
 
-<div class="secondary-actions">
-  <button class="secondary-button" [routerLink]="['/assign-sensor']">Asignar Sensor</button>
-  <button class="secondary-button">Historial de Datos Ambientales</button>
+  <div class="secondary-actions">
+    <button class="secondary-button" [routerLink]="['/assign-sensor']">Assign Sensor</button>
+    <button class="secondary-button">Environmental Data History</button>
+  </div>
 </div>
-

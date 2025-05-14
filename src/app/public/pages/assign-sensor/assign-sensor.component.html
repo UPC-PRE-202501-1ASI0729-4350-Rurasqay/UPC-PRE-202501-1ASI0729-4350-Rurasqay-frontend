@@ -1,92 +1,92 @@
 <div class="sensor-container">
-  <!-- Encabezado con imagen y título -->
+  <!-- Header with image and title -->
   <div class="header-section">
     <div class="header-image-container">
       <img
         src="images/logo-sensores.png"
-        alt="Icono Sensores"
+        alt="Sensor Icon"
         class="header-image"
       />
     </div>
     <div class="header-content">
-      <h2 class="main-title">Asignar Sensores a Productos/Ubicaciones</h2>
+      <h2 class="main-title">Assign Sensors to Product/Location</h2>
     </div>
   </div>
 
   <div class="steps-container">
     <div class="first-step-container">
-      <h2>Paso 1 : Seleccionar Producto</h2>
+      <h2>Step 1: Select Product</h2>
 
       <div class="inputs-container">
-        <span class="input-label">Producto:</span>
+        <span class="input-label">Product:</span>
         <input type="text" class="input-box" placeholder="" />
         -
-        <span class="input-label">Lote:</span>
+        <span class="input-label">Batch:</span>
         <input type="text" class="input-box" placeholder="" />
       </div>
 
-      <span>Producto seleccionado: “Vacuna covid - Lote #A23”</span>
+      <span>Selected product: “Covid Vaccine - Batch #A23”</span>
     </div>
 
     <div class="second-step-container">
-      <h2>Paso 2: Selecciona ubicación de almacenamiento</h2>
+      <h2>Step 2: Select storage location</h2>
 
-      <span>Ubicación: “Cámara 3 - Farmacia Central”</span>
+      <span>Location: “Chamber 3 - Central Pharmacy”</span>
     </div>
 
     <div class="thrid-step-container">
-      <h2>Paso 3: Paso 3: Asignar sensores disponibles</h2>
+      <h2>Step 3: Assign available sensors</h2>
       <div class="input-box-container">
-        <label for="">Sensor #TEMP-004 (Temperatura)</label>
+        <label for="">Sensor #TEMP-004 (Temperature)</label>
         <input type="checkbox" class="input-box" />
       </div>
 
       <div class="input-box-container">
-        <label for="">Sensor #HUM-011 (Humedad) </label>
+        <label for="">Sensor #HUM-011 (Humidity)</label>
         <input type="checkbox" class="input-box" />
       </div>
 
       <div class="input-box-container">
-        <label for="">Sensor #WEIGHT-100 (Peso) </label>
+        <label for="">Sensor #WEIGHT-100 (Weight)</label>
         <input type="checkbox" class="input-box" />
       </div>
     </div>
   </div>
 
-  <h1>Ver Sensores Activados</h1>
+  <h1>View Activated Sensors</h1>
 
   <div class="table-container">
     <table class="product-table">
       <thead>
-        <tr>
-          <th>#</th>
-          <th>Nombre Producto</th>
-          <th>Ubicación</th>
-          <th>Sensores</th>
-        </tr>
+      <tr>
+        <th>#</th>
+        <th>Product Name</th>
+        <th>Location</th>
+        <th>Sensors</th>
+      </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Vacuna Covid</td>
-          <td>Cámara 3</td>
-          <td>TEMP-004, HUM-011</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Yogurt Natural</td>
-          <td></td>
-          <td>TEMP-001</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Leche Gloria</td>
-          <td></td>
-          <td></td>
-        </tr>
+      <tr>
+        <td>1</td>
+        <td>Covid Vaccine</td>
+        <td>Chamber 3</td>
+        <td>TEMP-004, HUM-011</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Natural Yogurt</td>
+        <td></td>
+        <td>TEMP-001</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Gloria Milk</td>
+        <td></td>
+        <td></td>
+      </tr>
       </tbody>
     </table>
   </div>
 
-  <button class="back-button" [routerLink]="['/sensors']">Volver</button>
+  <button class="back-button" [routerLink]="['/sensors']">Back</button>
 </div>
