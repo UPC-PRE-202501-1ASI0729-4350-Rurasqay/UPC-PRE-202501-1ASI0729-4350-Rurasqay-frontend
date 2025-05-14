@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { DashboardComponent } from './public/pages/dashboard/dashboard.component';
+import { AssignSensorComponent } from './public/pages/assign-sensor/assign-sensor.component';
 const ProductEdit = () => import('./Inventory/components/product-edit/product-edit.component'). then(m => m.ProductEditComponent);
 const ProductDetail = () => import('./Inventory/components/product-detail/product-detail.component'). then(m => m.ProductDetailComponent);
 const ProductAdd = () => import('./Inventory/components/product-add/product-add.component') .then(m => m.ProductAddComponent);
@@ -18,5 +19,7 @@ export const routes: Routes = [
   { path: 'alerts', loadComponent: AlertsComponent},
   { path: 'sensors', loadComponent: SensorsComponent},
   { path: 'configuration', loadComponent: ConfigurationsComponent},
-  { path: 'support', loadComponent: SupportComponent}
+  { path: 'support', loadComponent: SupportComponent},
+
+  { path: 'assign-sensor', component: AssignSensorComponent}
 ];
